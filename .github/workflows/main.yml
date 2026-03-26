@@ -35,7 +35,7 @@ jobs:
 
     steps:
       - name: checkout code
-        uses: action/checkout@v2
+        uses: actions/checkout@v2
 
       - name: setup docker
         uses: docker-practice/actions-setup-docker@v1
