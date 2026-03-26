@@ -42,7 +42,13 @@ jobs:
 
       - name: build docker image
         run: docker build -f Dockerfile -t practiceapp:latest .
-
+        
+      - name: docker login
+        uses: docker/login-action@v4.0.0
+        with:
+          password: ${{ secrets.P }}
+          username: ${{ vars.U }}
+        
       - name: setup docker scout
         run: |
           curl -fsSL https://raw.githubusercontent.com/docker/scout-cli/main/install.sh -o install-scout.sh
