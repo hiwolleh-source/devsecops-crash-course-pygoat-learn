@@ -59,8 +59,8 @@ jobs:
 
       - name: docker scout scan cve
         run: |
-            docker scout cves --format sarif--only-vuln-packages --only-severity critical,high -o scout-report.json
-            docker scout cves --format markdown--only-vuln-packages --only-severity critical,high >> $GITHUB_STEP_SUMMARY
+            docker scout cves --format sarif --only-vuln-packages --only-severity critical,high -o scout-report.json
+            docker scout cves --format markdown --only-vuln-packages --only-severity critical,high >> $GITHUB_STEP_SUMMARY
             
       - name: artifact
         uses: actions/upload-artifact@v4
