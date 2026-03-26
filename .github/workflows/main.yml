@@ -58,5 +58,5 @@ jobs:
         run: docker scout quickview
 
       - name: docker scout scan cve
-        run: docker scout cves
+        run: docker scout cves --format sarif --only-vuln-packages --only-severity (critical,high)
         
